@@ -1,0 +1,15 @@
+Source: librtmr
+Priority: extra
+Maintainer: Emmanuel Jorge <contact@rtmr.net>
+Build-Depends: debhelper (>= 7), autotools-dev
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://rtmr.net
+
+Package: librtmr
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: R.T.M.R Library
+ This is the principal library for the client side of R.T.M.R solution.
+

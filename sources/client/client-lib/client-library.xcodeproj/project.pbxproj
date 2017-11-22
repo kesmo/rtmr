@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDEA997D120A8526003DE3D8 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = FDEA997B120A8526003DE3D8 /* client.c */; };
+		FDEA997E120A8526003DE3D8 /* client.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA997C120A8526003DE3D8 /* client.h */; };
+		FDEA9993120A854B003DE3D8 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA9980120A854B003DE3D8 /* constants.h */; };
+		FDEA9994120A854B003DE3D8 /* entities.c in Sources */ = {isa = PBXBuildFile; fileRef = FDEA9981120A854B003DE3D8 /* entities.c */; };
+		FDEA9995120A854B003DE3D8 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA9982120A854B003DE3D8 /* entities.h */; };
+		FDEA9996120A854B003DE3D8 /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = FDEA9983120A854B003DE3D8 /* errors.c */; };
+		FDEA9997120A854B003DE3D8 /* errors.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA9984120A854B003DE3D8 /* errors.h */; };
+		FDEA999C120A854B003DE3D8 /* netcommon.c in Sources */ = {isa = PBXBuildFile; fileRef = FDEA998C120A854B003DE3D8 /* netcommon.c */; };
+		FDEA999D120A854B003DE3D8 /* netcommon.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA998D120A854B003DE3D8 /* netcommon.h */; };
+		FDEA99A0120A854B003DE3D8 /* utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = FDEA9991120A854B003DE3D8 /* utilities.c */; };
+		FDEA99A1120A854B003DE3D8 /* utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA9992120A854B003DE3D8 /* utilities.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC0630554660B00DB518D /* librtmrlibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = librtmrlibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEA997B120A8526003DE3D8 /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		FDEA997C120A8526003DE3D8 /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = client.h; sourceTree = "<group>"; };
+		FDEA9980120A854B003DE3D8 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		FDEA9981120A854B003DE3D8 /* entities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entities.c; sourceTree = "<group>"; };
+		FDEA9982120A854B003DE3D8 /* entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entities.h; sourceTree = "<group>"; };
+		FDEA9983120A854B003DE3D8 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
+		FDEA9984120A854B003DE3D8 /* errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
+		FDEA9988120A854B003DE3D8 /* licence_header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = licence_header.txt; sourceTree = "<group>"; };
+		FDEA998C120A854B003DE3D8 /* netcommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = netcommon.c; sourceTree = "<group>"; };
+		FDEA998D120A854B003DE3D8 /* netcommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netcommon.h; sourceTree = "<group>"; };
+		FDEA9991120A854B003DE3D8 /* utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utilities.c; sourceTree = "<group>"; };
+		FDEA9992120A854B003DE3D8 /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* rtmr-lib */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = "rtmr-lib";
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA997F120A854B003DE3D8 /* common */,
+				FDEA997B120A8526003DE3D8 /* client.c */,
+				FDEA997C120A8526003DE3D8 /* client.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* librtmrlibrary.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDEA997F120A854B003DE3D8 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA9980120A854B003DE3D8 /* constants.h */,
+				FDEA9981120A854B003DE3D8 /* entities.c */,
+				FDEA9982120A854B003DE3D8 /* entities.h */,
+				FDEA9983120A854B003DE3D8 /* errors.c */,
+				FDEA9984120A854B003DE3D8 /* errors.h */,
+				FDEA9988120A854B003DE3D8 /* licence_header.txt */,
+				FDEA998C120A854B003DE3D8 /* netcommon.c */,
+				FDEA998D120A854B003DE3D8 /* netcommon.h */,
+				FDEA9991120A854B003DE3D8 /* utilities.c */,
+				FDEA9992120A854B003DE3D8 /* utilities.h */,
+			);
+			name = common;
+			path = ../common;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEA997E120A8526003DE3D8 /* client.h in Headers */,
+				FDEA9993120A854B003DE3D8 /* constants.h in Headers */,
+				FDEA9995120A854B003DE3D8 /* entities.h in Headers */,
+				FDEA9997120A854B003DE3D8 /* errors.h in Headers */,
+				FDEA999D120A854B003DE3D8 /* netcommon.h in Headers */,
+				FDEA99A1120A854B003DE3D8 /* utilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* rtmrlibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "rtmrlibrary" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rtmrlibrary;
+			productName = "rtmr-lib";
+			productReference = D2AAC0630554660B00DB518D /* librtmrlibrary.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "client-library" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* rtmr-lib */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* rtmrlibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEA997D120A8526003DE3D8 /* client.c in Sources */,
+				FDEA9994120A854B003DE3D8 /* entities.c in Sources */,
+				FDEA9996120A854B003DE3D8 /* errors.c in Sources */,
+				FDEA999C120A854B003DE3D8 /* netcommon.c in Sources */,
+				FDEA99A0120A854B003DE3D8 /* utilities.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914B08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "rtmr-lib";
+			};
+			name = Debug;
+		};
+		1DEB914C08733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_MODEL_TUNING = G5;
+				LD_DYLIB_INSTALL_NAME = "@executable_path/$(EXECUTABLE_PATH)";
+				PRODUCT_NAME = rtmrlibrary;
+				SYMROOT = "";
+			};
+			name = Release;
+		};
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RTMR_LIBRARY_EXPORTS,
+					_RTMR,
+					_POSTGRES,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "rtmrlibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914B08733D8E0010E9CD /* Debug */,
+				1DEB914C08733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "client-library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

@@ -1,0 +1,35 @@
+<!ELEMENT project (description? versions parameters?)>
+<!ATTLIST project name CDATA #REQUIRED>
+
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT versions (version+)>
+
+<!ELEMENT parameters (parameter*)>
+
+<!ELEMENT parameter EMPTY>
+<!ATTLIST parameter
+	name CDATA #REQUIRED
+	value CDATA #IMPLIED>
+
+<!ELEMENT version (description? requirements? tests? campaigns?)>
+<!ATTLIST version number CDATA #REQUIRED>
+
+<!ELEMENT requirements (requirement*)>
+
+<!ELEMENT requirement (description? requirements?)>
+<!ATTLIST requirement
+	name CDATA #REQUIRED
+	category ( Fonctionnel | Interopérabilité | Charge | Performance | Disponibilité | Sécurité | Exploitabilité | Autre ) "Fonctionnel"
+	priority ( 1 | 2 | 3 | 4 | 5 ) "3">
+
+<!ELEMENT tests (test*)>
+<!ELEMENT test (description? actions? tests?)>
+<!ATTLIST test
+	name CDATA #REQUIRED
+	category ( Fonctionnel | Interopérabilité | Charge | Performance | Disponibilité | Sécurité | Exploitabilité | Autre ) "Fonctionnel"
+	priority ( 1 | 2 | 3 | 4 | 5 ) "3">
+
+<!ELEMENT actions (action*)>
+<!ELEMENT action (description? result?)>
+<!ELEMENT result (#PCDATA)>

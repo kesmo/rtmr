@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = FD9579DD123ABC4600E8091E /* netserver */;
+		activeTarget = 8DD76FA90486AB0100D96B5E /* netserver */;
+		addToTargets = (
+			8DD76FA90486AB0100D96B5E /* netserver */,
+		);
+		codeSenseManager = FD1C80731216C7B0000C1A54 /* Code sense */;
+		executables = (
+			FD9579DD123ABC4600E8091E /* netserver */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1004,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					964,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 340178166;
+			PBXWorkspaceStateSaveDate = 340178166;
+		};
+		perUserProjectItems = {
+			FD5E5F64128FD25700F2360C /* PBXTextBookmark */ = FD5E5F64128FD25700F2360C /* PBXTextBookmark */;
+			FD5E5F6A128FD25700F2360C /* PBXTextBookmark */ = FD5E5F6A128FD25700F2360C /* PBXTextBookmark */;
+			FDFD842A128ECE8D0066D73F /* PBXTextBookmark */ = FDFD842A128ECE8D0066D73F /* PBXTextBookmark */;
+			FDFF159F1446B52700ED6FEC /* PBXBookmark */ = FDFF159F1446B52700ED6FEC /* PBXBookmark */;
+			FDFF15A01446B61800ED6FEC /* PBXTextBookmark */ = FDFF15A01446B61800ED6FEC /* PBXTextBookmark */;
+			FDFF15A51446B61800ED6FEC /* PBXTextBookmark */ = FDFF15A51446B61800ED6FEC /* PBXTextBookmark */;
+		};
+		sourceControlManager = FD1C80721216C7B0000C1A54 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8DD76FA90486AB0100D96B5E /* netserver */ = {
+		activeExec = 0;
+		executables = (
+			FD9579DD123ABC4600E8091E /* netserver */,
+		);
+	};
+	FD1C80721216C7B0000C1A54 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	FD1C80731216C7B0000C1A54 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FD5E5F64128FD25700F2360C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FD9579C6123ABC4600E8091E /* errors.h */;
+		name = "errors.h: 44";
+		rLen = 18;
+		rLoc = 1375;
+		rType = 0;
+		vrLen = 1852;
+		vrLoc = 1040;
+	};
+	FD5E5F6A128FD25700F2360C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FD9579DF123ABC6B00E8091E /* serveur.c */;
+		name = "serveur.c: 522";
+		rLen = 0;
+		rLoc = 16303;
+		rType = 0;
+		vrLen = 1481;
+		vrLoc = 14978;
+	};
+	FD9579C2123ABC4600E8091E /* constants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 2405}}";
+			sepNavSelRange = "{3569, 18}";
+			sepNavVisRange = "{2469, 2370}";
+			sepNavWindowFrame = "{{38, 82}, {1107, 1070}}";
+		};
+	};
+	FD9579C6123ABC4600E8091E /* errors.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1182, 1703}}";
+			sepNavSelRange = "{1375, 18}";
+			sepNavVisRange = "{1040, 1852}";
+			sepNavWindowFrame = "{{396, 95}, {1107, 1070}}";
+		};
+	};
+	FD9579DD123ABC4600E8091E /* netserver */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = netserver;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	FD9579DE123ABC6B00E8091E /* main.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1182, 325}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 673}";
+		};
+	};
+	FD9579DF123ABC6B00E8091E /* serveur.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1776, 28756}}";
+			sepNavSelRange = "{16303, 0}";
+			sepNavVisRange = "{15665, 1490}";
+			sepNavWindowFrame = "{{546, 4}, {1107, 1070}}";
+		};
+	};
+	FDFD841F128ECE680066D73F /* libpq-fe.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = "libpq-fe.h";
+		path = "/Library/PostgreSQL/8.4/include/libpq-fe.h";
+		sourceTree = "<absolute>";
+	};
+	FDFD842A128ECE8D0066D73F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FDFD841F128ECE680066D73F /* libpq-fe.h */;
+		name = "libpq-fe.h: 11";
+		rLen = 0;
+		rLoc = 464;
+		rType = 0;
+		vrLen = 565;
+		vrLoc = 0;
+	};
+	FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1685, 18616}}";
+			sepNavSelRange = "{56319, 0}";
+			sepNavVisRange = "{54855, 2641}";
+			sepNavWindowFrame = "{{19, 133}, {1455, 1040}}";
+		};
+	};
+	FDFF159F1446B52700ED6FEC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */;
+	};
+	FDFF15A01446B61800ED6FEC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FD9579DF123ABC6B00E8091E /* serveur.c */;
+		name = "serveur.c: 555";
+		rLen = 0;
+		rLoc = 16303;
+		rType = 0;
+		vrLen = 1490;
+		vrLoc = 15665;
+	};
+	FDFF15A51446B61800ED6FEC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */;
+		name = "postgres-client-library.c: 1254";
+		rLen = 0;
+		rLoc = 56319;
+		rType = 0;
+		vrLen = 2641;
+		vrLoc = 54855;
+	};
+}

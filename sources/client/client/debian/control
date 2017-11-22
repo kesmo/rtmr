@@ -1,0 +1,16 @@
+Source: rtmr
+Priority: extra
+Maintainer: Emmanuel Jorge <contact@rtmr.net>
+Build-Depends: debhelper (>= 7), autotools-dev, qt4-qmake, libqt4-dev, g++, librtmr (>= 1.8.0), libproc-dev
+Standards-Version: 3.8.3
+Section: unknow
+Homepage: http://rtmr.net
+
+Package: rtmr
+Section: unknow
+Architecture: any
+Depends: ${misc:Depends}, libc6, libgcc1, libstdc++6, libqtcore4, libqt4-network, libqtgui4, libqt4-xml, librtmr (>= 1.8.0), procps
+Description: R.T.M.R Client
+ This is the client side of R.T.M.R solution which allows to manage software requirements and describe the scenarios and associated test cases and run them through targeted campaigns.
+ In addition, it provides precise management of software evolution through a versioning system for projects, requirement and test case.
+

@@ -1,0 +1,5 @@
+librtmr (1.8.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Emmanuel Jorge <emmanuel.jorge@rtmr.net>  Tue, 05 Mar 2013 10:42:21 +0100

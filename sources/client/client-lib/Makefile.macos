@@ -1,0 +1,88 @@
+CLIENT_NAME=rtmr
+CC = gcc
+CFLAGS = -DRTMR_LIBRARY_EXPORTS -D_RTMR -D_POSTGRES -O3 -Wall -W -c -fmessage-length=0
+DESTDIR = Release
+
+# Windows
+ifeq ($(OS),Windows_NT)
+	RM = del /Q $(DESTDIR)\*
+	LIBRARIES = -lws2_32 -shared -Wl,--out-implib=$(DESTDIR)/${CLIENT_NAME}library.lib -Wl,--output-def=$(DESTDIR)/${CLIENT_NAME}library.def
+	INCLUDE_DIR = -IC:\MinGW\include -IC:\MinGW\lib\gcc-lib\mingw32\3.2.3\include -I..\common
+	OUTPUT = $(DESTDIR)/${CLIENT_NAME}library.dll
+else
+	RM = rm -Rf $(DESTDIR)-*
+	UNAME = $(shell uname -a)
+	# MacOS 10.6
+	ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
+		LDFLAGS += -dynamic -install_name @executable_path/lib${CLIENT_NAME}.dylib
+		CFLAGS += -isysroot /Developer/SDKs/MacOSX10.6.sdk
+	# Linux
+	else
+		OUTPUT = $(DESTDIR)/lib${CLIENT_NAME}.so
+		# 64 bits
+		ifeq ($(firstword $(filter x86_64,$(UNAME))),x86_64)
+			CFLAGS += -fPIC
+		endif
+	endif
+	INCLUDE_DIR = -I../common
+endif
+LDFLAGS += -shared
+
+all: clean mkdirs make-arch lipo
+
+ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
+ifndef ARCH
+$(info Compiling all targets)
+make-arch:
+	@make -f Makefile.macos make-arch ARCH=i386
+	@make -f Makefile.macos make-arch ARCH=x86_64
+else
+$(info Compiling target $(ARCH))
+DESTDIR=Release-$(ARCH)
+OUTPUT = $(DESTDIR)/lib${CLIENT_NAME}.dylib
+LDFLAGS+= -arch $(ARCH)
+make-arch: 
+	@make -f Makefile.macos $(OUTPUT)
+endif
+
+lipo:
+	@lipo -create -arch i386 $(DESTDIR)-i386/lib${CLIENT_NAME}.dylib -arch x86_64 $(DESTDIR)-x86_64/lib${CLIENT_NAME}.dylib -output lib${CLIENT_NAME}.dylib
+
+else
+OUTPUT = $(DESTDIR)/lib${CLIENT_NAME}.so
+make-arch: 
+	@make -f Makefile.macos $(OUTPUT)
+
+lipo:
+	@echo "Universal binaries not available on this platform."
+
+endif
+
+
+mkdirs:
+	@mkdir -p $(DESTDIR)
+	@mkdir -p $(DESTDIR)-i386
+	@mkdir -p $(DESTDIR)-x86_64
+
+OBJS = $(DESTDIR)/client.o $(DESTDIR)/entities.o $(DESTDIR)/errors.o $(DESTDIR)/netcommon.o $(DESTDIR)/utilities.o
+
+$(DESTDIR)/client.o: client.c
+	$(CC) $(INCLUDE_DIR) $(CFLAGS) -c $< -o $@ $(LIBRARIES) $(LDFLAGS)
+
+$(DESTDIR)/entities.o: ../common/entities.c
+	$(CC) $(INCLUDE_DIR) $(CFLAGS) -c $< -o $@ $(LIBRARIES) $(LDFLAGS)
+
+$(DESTDIR)/errors.o: ../common/errors.c
+	$(CC) $(INCLUDE_DIR) $(CFLAGS) -c $< -o $@ $(LIBRARIES) $(LDFLAGS)
+
+$(DESTDIR)/netcommon.o: ../common/netcommon.c
+	$(CC) $(INCLUDE_DIR) $(CFLAGS) -c $< -o $@ $(LIBRARIES) $(LDFLAGS)
+
+$(DESTDIR)/utilities.o: ../common/utilities.c
+	$(CC) $(INCLUDE_DIR) $(CFLAGS) -c $< -o $@ $(LIBRARIES) $(LDFLAGS)
+
+clean:
+	$(RM)
+
+$(OUTPUT): $(OBJS)
+	$(CC) -o $(OUTPUT) $(OBJS) $(INCLUDE_LIB) $(LIBRARIES) $(LDFLAGS)

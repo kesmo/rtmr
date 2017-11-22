@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>languages/client-launcher_en.qm</file>
+    </qresource>
+</RCC>

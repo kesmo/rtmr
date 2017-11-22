@@ -1,0 +1,80 @@
+CC = gcc
+FLAGS = -D_POSTGRES -D_RTMR -O3 -Wall -W -c -fmessage-length=0
+DESTDIR = Release
+
+# Windows
+ifeq ($(OS),Windows_NT)
+	RM = del /Q $(DESTDIR)\*
+	LIBRARIES = -lws2_32 -lpq -mno-cygwin
+	INCLUDE_LIB = -LF:\DEV\postgres\pgsql\lib
+	#INCLUDE_DIR = -IC:\MinGW\include -IC:\MinGW\lib\gcc-lib\mingw32\3.2.3\include -I..\common -IF:\DEV\postgres\pgsql\include
+	INCLUDE_DIR = -IF:\DEV\MinGW_5.1.6\include -IF:\DEV\MinGW_5.1.6\lib\gcc\mingw32\4.4.0\include -I..\common -IF:\DEV\postgres\pgsql\include
+	OUTPUT = $(DESTDIR)/netserver.exe
+	SERVICE_OUTPUT = $(DESTDIR)/netservice.exe
+	SERVICE_LIBRARIES = -lws2_32 -lpq -lkernel32 -lshell32
+else
+	RM = rm -Rf $(DESTDIR)
+	UNAME = $(shell uname -a)
+	OUTPUT = $(DESTDIR)/netserver
+	LIBRARIES = -lm -lpq
+	# MacOS 10.5
+	ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
+		LDFLAGS += -arch i386 -arch ppc
+		FLAGS += -isysroot /Developer/SDKs/MacOSX10.5.sdk $(LDFLAGS)
+		INCLUDE_LIB = -L/Library/PostgreSQL/8.4/lib
+		INCLUDE_DIR = -I../common -I/Library/PostgreSQL/8.4/include
+	# Linux
+	else
+		INCLUDE_LIB = 
+		INCLUDE_DIR = -I../common -I/usr/include/postgresql -I/usr/include/pgsql
+	endif
+endif
+
+all: clean mkdirs $(OUTPUT)
+
+mkdirs:
+	@mkdir -p $(DESTDIR)
+
+OBJS = $(DESTDIR)/main.o $(DESTDIR)/serveur.o $(DESTDIR)/entities.o $(DESTDIR)/errors.o $(DESTDIR)/netcommon.o $(DESTDIR)/utilities.o $(DESTDIR)/postgres-client-library.o
+
+SERVICE_OBJS = $(DESTDIR)/netservice.o $(DESTDIR)/service.o $(DESTDIR)/serveur.o $(DESTDIR)/entities.o $(DESTDIR)/errors.o $(DESTDIR)/netcommon.o $(DESTDIR)/utilities.o $(DESTDIR)/postgres-client-library.o
+
+$(DESTDIR)/netservice.o: netservice.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/service.o: service.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/main.o: main.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/serveur.o: serveur.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/entities.o: ../common/entities.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/errors.o: ../common/errors.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/netcommon.o: ../common/netcommon.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/utilities.o: ../common/utilities.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+
+$(DESTDIR)/postgres-client-library.o: ../common/postgres/postgres-client-library.c
+	$(CC) $(INCLUDE_DIR) $(FLAGS) -c $< -o $@
+	
+service: $(SERVICE_OUTPUT)
+
+clean:
+	$(RM)
+
+$(OUTPUT): $(OBJS)
+	$(CC) -o $(OUTPUT) $(OBJS) $(INCLUDE_LIB) $(LIBRARIES) $(LDFLAGS)
+
+$(SERVICE_OUTPUT): $(SERVICE_OBJS)
+	$(CC) -o $(SERVICE_OUTPUT) $(SERVICE_OBJS) $(INCLUDE_LIB) $(SERVICE_LIBRARIES) $(LDFLAGS)
+
+

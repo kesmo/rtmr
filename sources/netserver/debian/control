@@ -1,0 +1,16 @@
+Source: netserver 
+Priority: extra
+Maintainer: Emmanuel Jorge <contact@rtmr.net>
+Build-Depends: debhelper (>= 7), autotools-dev, libpq-dev
+Standards-Version: 3.8.3
+Section: unknow
+Homepage: http://rtmr.net
+
+Package: netserver
+Section: unknow
+Architecture: any
+Depends: ${misc:Depends}, libpq5, libc6, insserv, sysv-rc
+Description: R.T.M.R Server
+ This is the server side of R.T.M.R solution which allows to manage software requirements and describe the scenarios and associated test cases and run them through targeted campaigns.
+ In addition, it provides precise management of software evolution through a versioning system for projects, requirements, scenarios and test cases.
+

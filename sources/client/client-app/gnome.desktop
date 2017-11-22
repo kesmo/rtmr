@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=R.T.M.R
+Comment=Référentiel de gestion d'exigences et de tests
+Exec=rtmr
+Icon=client.png
+Terminal=false
+Type=Application
+

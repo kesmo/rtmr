@@ -1,0 +1,7 @@
+{
+  "name": "R.T.M.R extension",
+  "version": "1.0",
+  "plugins": [
+    { "path": "plugins/nprtmr.dll", "public": true }
+  ]
+}

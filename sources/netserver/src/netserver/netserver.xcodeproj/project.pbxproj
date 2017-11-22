@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD9579D5123ABC4600E8091E /* entities.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579C3123ABC4600E8091E /* entities.c */; };
+		FD9579D6123ABC4600E8091E /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579C5123ABC4600E8091E /* errors.c */; };
+		FD9579D9123ABC4600E8091E /* netcommon.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579CE123ABC4600E8091E /* netcommon.c */; };
+		FD9579DB123ABC4600E8091E /* utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579D3123ABC4600E8091E /* utilities.c */; };
+		FD9579E1123ABC6B00E8091E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579DE123ABC6B00E8091E /* main.c */; };
+		FD9579E2123ABC6B00E8091E /* serveur.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9579DF123ABC6B00E8091E /* serveur.c */; };
+		FDBEA4641216E41100A05BDC /* libpq.5.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBEA4631216E41100A05BDC /* libpq.5.2.dylib */; };
+		FDFF159E1446B51F00ED6FEC /* postgres-client-library.c in Sources */ = {isa = PBXBuildFile; fileRef = FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD9579C2123ABC4600E8091E /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		FD9579C3123ABC4600E8091E /* entities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entities.c; sourceTree = "<group>"; };
+		FD9579C4123ABC4600E8091E /* entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entities.h; sourceTree = "<group>"; };
+		FD9579C5123ABC4600E8091E /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
+		FD9579C6123ABC4600E8091E /* errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
+		FD9579CA123ABC4600E8091E /* licence_header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = licence_header.txt; sourceTree = "<group>"; };
+		FD9579CE123ABC4600E8091E /* netcommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = netcommon.c; sourceTree = "<group>"; };
+		FD9579CF123ABC4600E8091E /* netcommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netcommon.h; sourceTree = "<group>"; };
+		FD9579D3123ABC4600E8091E /* utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utilities.c; sourceTree = "<group>"; };
+		FD9579D4123ABC4600E8091E /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		FD9579DC123ABC4600E8091E /* netserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = netserver; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9579DE123ABC6B00E8091E /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		FD9579DF123ABC6B00E8091E /* serveur.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = serveur.c; sourceTree = "<group>"; };
+		FD9579E0123ABC6B00E8091E /* serveur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serveur.h; sourceTree = "<group>"; };
+		FDBEA4631216E41100A05BDC /* libpq.5.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpq.5.2.dylib; path = /Library/PostgreSQL/8.4/lib/libpq.5.2.dylib; sourceTree = "<absolute>"; };
+		FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "postgres-client-library.c"; sourceTree = "<group>"; };
+		FDFF159D1446B51F00ED6FEC /* postgres-client-library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "postgres-client-library.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBEA4641216E41100A05BDC /* libpq.5.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* netserver */ = {
+			isa = PBXGroup;
+			children = (
+				FD9579DE123ABC6B00E8091E /* main.c */,
+				FD9579DF123ABC6B00E8091E /* serveur.c */,
+				FD9579E0123ABC6B00E8091E /* serveur.h */,
+				FD9579C1123ABC4600E8091E /* common */,
+				FDBEA4631216E41100A05BDC /* libpq.5.2.dylib */,
+				FD9579DC123ABC4600E8091E /* netserver */,
+			);
+			name = netserver;
+			sourceTree = "<group>";
+		};
+		FD9579C1123ABC4600E8091E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				FD9579C2123ABC4600E8091E /* constants.h */,
+				FD9579C3123ABC4600E8091E /* entities.c */,
+				FD9579C4123ABC4600E8091E /* entities.h */,
+				FD9579C5123ABC4600E8091E /* errors.c */,
+				FD9579C6123ABC4600E8091E /* errors.h */,
+				FD9579CA123ABC4600E8091E /* licence_header.txt */,
+				FD9579CE123ABC4600E8091E /* netcommon.c */,
+				FD9579CF123ABC4600E8091E /* netcommon.h */,
+				FD9579D0123ABC4600E8091E /* postgres */,
+				FD9579D3123ABC4600E8091E /* utilities.c */,
+				FD9579D4123ABC4600E8091E /* utilities.h */,
+			);
+			name = common;
+			path = ../common;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD9579D0123ABC4600E8091E /* postgres */ = {
+			isa = PBXGroup;
+			children = (
+				FDFF159C1446B51F00ED6FEC /* postgres-client-library.c */,
+				FDFF159D1446B51F00ED6FEC /* postgres-client-library.h */,
+			);
+			path = postgres;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* netserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "netserver" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = netserver;
+			productInstallPath = "$(HOME)/bin";
+			productName = netserver;
+			productReference = FD9579DC123ABC4600E8091E /* netserver */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "netserver" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* netserver */;
+			productRefGroup = 08FB7794FE84155DC02AAC07 /* netserver */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* netserver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9579D5123ABC4600E8091E /* entities.c in Sources */,
+				FD9579D6123ABC4600E8091E /* errors.c in Sources */,
+				FD9579D9123ABC4600E8091E /* netcommon.c in Sources */,
+				FD9579DB123ABC4600E8091E /* utilities.c in Sources */,
+				FD9579E1123ABC6B00E8091E /* main.c in Sources */,
+				FD9579E2123ABC6B00E8091E /* serveur.c in Sources */,
+				FDFF159E1446B51F00ED6FEC /* postgres-client-library.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(LOCAL_LIBRARY_DIR)/PostgreSQL/8.4/lib\"",
+				);
+				PRODUCT_NAME = netserver;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_XOPEN_SOURCE,
+					_RTMR,
+					_POSTGRES,
+				);
+				HEADER_SEARCH_PATHS = /Library/PostgreSQL/8.4/include;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /Library/PostgreSQL/8.4/lib;
+				PRODUCT_NAME = netserver;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "netserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "netserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
